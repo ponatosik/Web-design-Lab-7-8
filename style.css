@@ -20,6 +20,7 @@ header
     grid-area: header;
 }
 .header-deco{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: brown;
     font-style: oblique;
     font-size: 1.2em;
