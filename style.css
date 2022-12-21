@@ -1,0 +1,206 @@
+body{
+    font-family: sans-serif;
+    margin: 0;
+    color:#29323a;
+}
+.wrapper{
+    width: 100%;
+    display: grid;
+    grid-template: repeat(4, auto)/ 1fr;
+    grid-template-areas: "header" "filters" "content" "footer";
+    grid-gap: 5px;
+    border: 2px solid gray;
+    box-sizing: border-box;
+    padding: 5px;
+}
+header
+{
+    font-size: 1.5rem;
+    text-align: center;
+    grid-area: header;
+}
+.header-deco{
+    color: brown;
+    font-style: oblique;
+    font-size: 1.2em;
+    font-weight: bolder;
+}
+.filters{
+    grid-area: filters;
+    display: grid;
+    grid-template: repeat(3, 50px)/ 1fr 1fr;
+    grid-gap: 10px;
+}
+.filters > label{
+    background-color: aliceblue;
+    border: 1px solid grey;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: box-shadow 0.3s;
+}
+input[type="radio"]{
+    display: none;
+}
+.callories-filter{
+    display: none;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: content;
+}
+.recepie-card{
+    flex: 1 1 100%;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 5px 0;
+    background-color: lightgrey;
+    border: 1px solid grey;
+    transition: box-shadow 0.3s;
+}
+.recepie-card > img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    align-self: stretch;
+    background-color: grey;
+}
+footer{
+    grid-area: footer;
+}
+.recepie-card > h3,
+.recepie-card > span{
+    display: none;
+}
+
+.recepie-card:hover,
+.filters > label:hover{
+    box-shadow: 2px 2px 5px gray;
+}
+
+#pyrig-filter:checked ~ .recepie-card:not(.pyrig),
+#rylet-filter:checked ~ .recepie-card:not(.rylet),
+#syrnyk-filter:checked ~ .recepie-card:not(.syrnyk),
+#tistechko-filter:checked ~ .recepie-card:not(.tistechko),
+#tort-filter:checked ~ .recepie-card:not(.tort){
+    background-color: gray;
+    order: 1;
+    filter: grayscale(80%) contrast(0.5) brightness(1.2);
+}
+
+@media (min-width: 730px) {
+    .filters{
+        grid-template: 50px 50px/ repeat(3, 1fr);
+    }
+    .recepie-card{
+        flex: 0 1 32.7%;
+        display: grid;
+        grid-template: 5fr 1fr/ 1fr;
+    }
+    .recepie-card > h3{
+        display: initial;
+    }
+    main{
+        justify-content: space-between;
+    }
+    .recepie-card > img{
+        margin: 15px;
+        width: calc(100% - 30px);
+        height: auto;
+    }
+    .recepie-card > h3{
+        font-weight: normal;
+        margin: 0 15px;
+    }
+    footer{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 1200px) {
+    .wrapper{
+        width: 1200px;
+        max-width: 99vw;
+        box-sizing: border-box;
+        padding: 10px;
+        position: absolute;
+        left: calc(50vw - 600px);
+        grid-gap: 10px;
+        grid-template: repeat(3, auto)/ 2.7fr 1fr;
+        grid-template-areas: "header header"
+                             "content filters" 
+                             "footer footer" ;
+    }
+    body
+    {
+        padding: 10px 0;
+    }
+    .filters{
+        grid-template: 150px repeat(6, 50px)/1fr;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 5px 0;
+        background-color: lightgrey;
+        border: 1px solid grey;
+
+    }
+    .callories-filter{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        font-size: larger;
+    }
+    input[type="range"]{
+        width: 100%;
+    }
+    .recepie-card{
+        grid-template: auto 1fr/ 1fr;        
+    }
+    .recepie-card > span{
+        display: initial;
+        margin: 15px;
+        margin-top: 5px;
+        padding-top: 5px;
+        border-top: 1px solid gray;
+    }
+    .recepie-card > img{
+        height: 180px;
+    }
+
+input[type=range] {
+    height: 33px;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+    background-color:transparent;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px #000000;
+    background-color: #B6B6B6;
+    border-radius: 25px;
+    border: 1px solid #8A8A8A;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: 1px 1px 1px #828282;
+    border: 1px solid gray;
+    height: 18px;
+    width: 18px;
+    border-radius: 50px;
+    background-color:#29323a;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -9px;
+  }
+}

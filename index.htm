@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Тортики і тістечка</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header><h1>Тортики <span class="header-deco">&</span> Тістечка</h1></header>
+        <aside class="filters">
+            <div class="callories-filter">
+                <p>Калорій у порції</p>
+                <input type="range" name="callories-range" id="callories">
+                <p>Від 0 до 500 кКал</p>
+            </div>
+            <label for="pyrig-filter">Пиріг</label>
+            <label for="rylet-filter">Рулет</label>
+            <label for="syrnyk-filter">Сирники</label>
+            <label for="tistechko-filter">Тістечко</label>
+            <label for="tort-filter">Торт</label>
+            <label for="discard-filter">Скинути фільтр</label>
+        </aside>
+        <main>
+            <!-- Content Filters -->
+            <input type="radio" name="recepie-filter" id="pyrig-filter">
+            <input type="radio" name="recepie-filter" id="rylet-filter">
+            <input type="radio" name="recepie-filter" id="syrnyk-filter">
+            <input type="radio" name="recepie-filter" id="tistechko-filter">
+            <input type="radio" name="recepie-filter" id="tort-filter">
+            <input type="radio" name="recepie-filter" id="discard-filter" checked>
+
+            <div class="recepie-card syrnyk">
+                <img src="images/Halytskyy-syrnyk.jpg" alt="" width="256" height="256">
+                <h3>Сирник: <strong>Львівський</strong></h3>
+                <span>Калорій у порції 222 кКал</span>
+            </div>
+            <div class="recepie-card tort">
+                <img src="images/Kyyivskyy-tort.jpg" alt=""  width="256" height="256">
+                <h3>Торт: <strong>Київський</strong></h3>
+                <span>Калорій у порції 481 кКал</span>
+            </div>
+            <div class="recepie-card syrnyk">
+                <img src="images/Syrnyk.jpg" alt="" width="256" height="256">
+                <h3>Сирник: <strong>Традиційний</strong></h3>
+                <span>Калорій у порції 183 кКал</span>
+            </div>
+            <div class="recepie-card pyrig">
+                <img src="images/Pyrih-z-vyshnyamy.jpg" alt="" width="256" height="256">
+                <h3>Пиріг: <strong>З вишнями</strong></h3>
+                <span>Калорій у порції 274 кКал</span>
+            </div>
+            <div class="recepie-card rylet">
+                <img src="images/Zavyvanets-z-makom.jpg" alt="" width="256" height="256">
+                <h3>Рулет: <strong>Завиванець з маком</strong></h3>
+                <span>Калорій у порції 340 кКал</span>
+            </div>
+            <div class="recepie-card tistechko">
+                <img src="images/Ryzdvyaniy-plyatsok.jpg" alt="" width="256" height="256">
+                <h3>Тістечко: <strong>Різдвяний пляцок</strong></h3>
+                <span>Калорій у порції 386 кКал</span>
+            </div>
+            <div class="recepie-card pyrig">
+                <img src="images/Yavorivskyi-pyrih.jpg" alt="" width="256" height="256">
+                <h3>Пиріг: <strong>Яворівський</strong></h3>
+                <span>Калорій у порції 244 кКал</span>
+            </div>
+            <div class="recepie-card tistechko">
+                <img src="images/Plyatsok-vyshyvanka.jpg" alt="" width="256" height="256">
+                <h3>Тістечко: <strong>Пляцок "вишиванка"</strong></h3>
+                <span>Калорій у порції 397 кКал</span>
+            </div>
+            <div class="recepie-card syrnyk">
+                <img src="images/Syrnyk-po-Kyivski.jpg" alt="" width="256" height="256">
+                <h3>Сирник: <strong>По-Київськи</strong></h3>
+                <span>Калорій у порції 276 кКал</span>
+            </div>
+        </main>
+        <footer>
+            <div class="email">Контакти: <a href="mailto:abc@example.com">abc@example.com</a></div>
+            <div class="copyright">© 2022 all rights reserved</div>
+        </footer>
+    </div>
+</body>
+</html>
